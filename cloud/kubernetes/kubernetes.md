@@ -77,3 +77,7 @@ or remote , outside of the k8s cluster
 - kublet 
 - kube-proxy
 - 컨테이너 런타임 
+
+#### k8s namespace
+- 쿠버네티스 api 종류중 하나 
+- 클러스터 하나를 여러개의 논리적인 단위로 나눠서 사용 
