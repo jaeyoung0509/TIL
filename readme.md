@@ -12,3 +12,6 @@
 - FP deep dive
 
 ## 🌟 Language 
+- go lang 
+- pytohn 
+- javaScript(typeScript)
