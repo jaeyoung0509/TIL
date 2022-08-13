@@ -20,3 +20,36 @@ func min [T Integer | Float](a , b T) T {
     return a + b
 }
 ```
+
+### 타입 제한자  - 인터페이스 차이
+```go
+type Stringer interface() {
+    String() string
+}
+type Integer interface {
+    ~int8 | ~int16
+}
+```
+- 둘다 타입을 제한 
+- 타입 제한을 포함하고 있는 인터페이스는  인터페이스로 사용을 할 수 없음 
+- 인터페이스는 -> 타입제한 가능
+- 타입제한자는 -> 인터페이스로 불가능 
+- 인터페이스 + 타입 제한자 (같이 사용 가능) -> 인터페이스
+
+#### 제네릭 함수 
+```go
+func Map[F , T  any] (s []F , f func(F) T)[]T {
+    rst := make([]T , len(s))
+    for i,v := range s {
+        rst[i] = f(v)
+    }
+    return rst 
+}
+
+func main() {
+    doubled := Map([]int{1,2,3} , func(v int) int {
+        return v*2
+    })
+    fmt.println(doubled)
+}
+```
