@@ -45,7 +45,6 @@ func Map[F , T  any] (s []F , f func(F) T)[]T {
     }
     return rst 
 }
-
 func main() {
     doubled := Map([]int{1,2,3} , func(v int) int {
         return v*2
