@@ -48,3 +48,24 @@ func main(){
 }
 ```
 
+### data types 
+- scalar type: 단일 값을 나타내는 값
+#### integers 
+- integers are whole numbers
+- they are either signed or unsigned (only positive)
+- the rust compiler must know the data types for each variable in your code
+- the data type can be inferred
+- rust defaults to type `i32`
+#### floating point 
+- tpyes: f32 and f64
+- default type is f64 (in rust `u8`)
+
+#### numerical operations 
+
+#### booleans
+- one byte in size
+
+#### characters 
+- specified using the char keyword
+- use single quotes
+- four bytes in size 
