@@ -1,1 +1,2 @@
 https://always-kimkim.tistory.com/category/%EA%B0%9C%EB%B0%9C%EC%9E%90%20%EB%9D%BC%EC%9D%B4%ED%94%84/%EC%B9%B4%ED%94%84%EC%B9%B4
+https://etloveguitar.tistory.com/category/%EB%B6%84%EC%82%B0%20%EC%8B%9C%EC%8A%A4%ED%85%9C/Kafka
