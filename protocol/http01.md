@@ -16,3 +16,6 @@ https://wormwlrm.github.io/2022/09/02/Evolution-of-HTTP.html
 
 
 1-RTT
+https://www.boannews.com/media/view.asp?idx=70957&kind=1
+http://ktword.co.kr/test/view/view.php?m_temp1=1687
+https://blog.cloudflare.com/ko-kr/even-faster-connection-establishment-with-quic-0-rtt-resumption-ko-kr/
