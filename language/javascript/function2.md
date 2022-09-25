@@ -37,3 +37,4 @@ es11에선 global this
 - function object(함수 코드)
 - 전역마다 메모리가 다르고 
 - 함수마다 메모리 다르고 
+
