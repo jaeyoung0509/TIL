@@ -13,5 +13,5 @@
 
 ## 🌟 Language 
 - go lang 
-- pytohn 
+- python 
 - javaScript(typeScript)
