@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=NmSeLspQoAA
+git comhttps://www.youtube.com/watch?v=NmSeLspQoAA
 https://www.youtube.com/watch?v=QaiczQzJAmA
 https://www.youtube.com/watch?v=PzOJn8uOV68
 https://www.youtube.com/watch?v=_3LpJ6I-tzc
@@ -13,4 +13,3 @@ frame 객체
 - 함수가 실행될 때 필요 객체
 - f_locals : local variables are stored 
 - f_back: previous 
-- 
