@@ -1,6 +1,7 @@
 0809 https://hwangheek.github.io/2019/asynchronous-python/ 공부하기:
 https://medium.com/from-the-scratch/dont-be-confused-between-concurrency-and-parallelism-eac8e703943a
 https://www.youtube.com/watch?v=F19R_M4Nay4
+https://www.youtube.com/watch?v=zAvWv_Wi0z0
 
 >-  async echo system
 >- event loop 
