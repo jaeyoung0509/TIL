@@ -17,7 +17,6 @@
 
 - dynamic programming
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled.png)
 
 - db도 내부적으로 캐쉬갖고 있음
     - 파레토 법칙(2:8) 
@@ -25,13 +24,11 @@
     - 성능은 좋지 않음
 - cache #1  look aside cache
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%201.png)
 
 - write back
     - 데이터 유실 가능성
     - 배치작업 시
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%202.png)
 
 ### 왜 collection이 중요한가?
 
@@ -43,9 +40,7 @@
     - 친구 리스트, key - value
         - 두개의 독립적인 작업인데  (acid)  타이밍이 겹친다면?
         
-        ![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%203.png)
-        
-        ![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%204.png)
+
         
     - redis의 자료구조는 atomic하기 때문에 race condition을 피할 수 있음
         - 그래도 잘못짜면 발생
@@ -114,7 +109,7 @@
 - redis는 싱글 스레드
 - 레디스가 동시에 여러개의 명령을 처리할 수 있을까?
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%206.png)
+
 
 - 한번에 하나의 명령만 수행 가능
     - 그럼 긴 명령어는 어떻게 해?  `지양`
@@ -133,11 +128,8 @@
     - dbms로 보면 statement replication과 유사
         - db에서 now를 예시로 들면 primary 와 secondary에서 값이 다를 수 있음
     
-    ![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%207.png)
-    
-- replication과정에서 fork가 발생하므로 메모리 부족이 발생할 수 있음
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%208.png)
+
 
 - 레플리카의 경우에만 rdb/aof 설정
 
@@ -165,7 +157,7 @@
         - 메모리 사용량이 더 많음
         - library 구현이 필요
     
-    ![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%209.png)
+
     
     ### redis failoveer
     
@@ -176,7 +168,6 @@
         - 클라이언트에 추가적인 구현 필요 x
         - dns기반은 dns cache ttl 관리 필요
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%2010.png)
 
 ---
 
@@ -193,7 +184,7 @@
 
 - [https://www.youtube.com/watch?v=WcE5G4QQ_zY](https://www.youtube.com/watch?v=WcE5G4QQ_zY)
 
-![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%2011.png)
+
 
 - read cache
     - 많이 변하는 데이터의 경우에는 성능향상을 가져올 수 없음
@@ -207,4 +198,3 @@
     
     → elastic cache 도입
     
-    ![Untitled](redis%20study%20f657f409fc1744499476a5f58410838b/Untitled%2012.png)
