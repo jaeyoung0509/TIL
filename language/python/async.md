@@ -33,3 +33,9 @@ https://www.youtube.com/watch?v=zAvWv_Wi0z0
 
 ### short history of asyncio
 
+
+## async librar는 어떻게 동작할까
+- [link](https://www.youtube.com/watch?v=F1aF4P1uBoU)
+- asyncio.Transport
+- asyncio.Protocol
+- 
