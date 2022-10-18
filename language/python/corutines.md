@@ -43,3 +43,8 @@ https://www.youtube.com/watch?v=QaiczQzJAmA
 - TODO
   - python은 task 기반?
 https://www.youtube.com/watch?v=NmSeLspQoAA
+https://it-eldorado.tistory.com/m/159
+https://bentist.tistory.com/m/89
+
+
+https://jh-7.tistory.com/m/25
