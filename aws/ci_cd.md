@@ -7,6 +7,15 @@
 
 ## code commit
 - aws vsc
+### 연결 방법
+- https
+- grc (git remote codecommit)
+- 루트 계정은 ssh 연결을 할 수 없음
+### 병합 방법
+- 빠른 전달 병합
+- 스쿼시 및 병합
+- 3방향 병합
+
 
 ## code deploy 
 - automated development 
@@ -19,20 +28,22 @@
   - 점진적인 배포
 ```
 elb
-- vo (ec2)
-- vo (ec2)
-- vo (ec2)
+- v0 (ec2)
+- v0 (ec2)
+- v0 (ec2)
 ```
-- 첫번째 서버 셧다운 -> v1
-- 두번째 서버 셧다운 -> v2
-- 세번째 서버 셧다운 -> v3
+- 첫번째 서버 셧다운 v0 -> v1
+- 두번째 서버 셧다운 v0 -> v1
+- 세번째 서버 셧다운 v0 -> v1
 - 롤링 배포를 사용하면 이전 버전으로 돌아가는건 어려움
+  - 하나하나 버전을 낮춰줘야 됨
+
 
 ### blue / green 배포
 - blue: 현재 프로덕션
 - green: 새로 배포할 녀석들
 - 고객들은 프로덕션과 유사한 환경
-- 블루 -> 그린 
+- 블루 ->(트래픽) 그린 
 - 블루 & 그린 배포 
 불루를 셧다운 -> 그린으로
 ```
@@ -64,14 +75,32 @@ elb
     - s3
     - ec2 (for code deploy agent)
     - code deploy
-
+#### code deploy agent
 - user
   - 권한
         - s3 
         - code deploy    
 - ruby 기반 
 - wget 
-- aws configure 
+  - amazon 
+  - aws configure 
+`sudo service codedeploy-agent status`
+
+#### local machine -> deploy
+- iam access key , secret access key
+- local machine
+  aws configure
+`appspec.yml` -> aws 관련 파일
+- yml 파일로 코드 deploy 관련 파일들을 관리 가능
+```
+hooks:
+  Bedoreinsall:
+    - location:
+    - timeout: 300
+    - runas: root
+```
+-> s3 bucket
+배포그룹 생성
 
 
 ### code pipeline
@@ -82,3 +111,4 @@ elb
 - code commit
 - code build
 - code deploy
+![](./2022-11-10-11-29-28.png)
