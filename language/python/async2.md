@@ -124,3 +124,13 @@ https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1
 cf) 스케쥴링이란?
 - 다중 프로그래밍을 가능하게 하는 동작 기법.
 - 운영체제는 프로세스들에게 cpu등 지원 배정을 적절히 함으로서 시스템 성능 개선 가능
+#### 순서
+- task 객체 생성
+  - `task._step`
+  event loop call_soon에 의해 스케쥴링
+  result = corutine.send(None)
+
+#### selector
+- 운영체제 풀링 객체를 매핑하기 위함
+cf) 풀링이란
+Pooling 기법이란 미리 데이터베이스 Connection을 여러 개 만들어서 특정 공간에 저장해 놓고, 여러 사용자가 필요할 때 마다 하나씩 꺼내서 사용하고 다시 집어 넣는 방식을 말합 
