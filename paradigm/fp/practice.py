@@ -30,17 +30,31 @@ comments : list[dict] = [
     {"id": 308, "body": "댓글8", "user_id": 103, "post_id": 205},
     {"id": 309, "body": "댓글9", "user_id": 103, "post_id": 201},
 ]
-map(
-    filter(input, lambda x : x["age"] >=30) ,
-    lambda x: x["id"])
-)
-reduce(filter(lambda x :x.get("user_id") ==101 ,posts) ,)
+# map(
+#     filter(input, lambda x : x["age"] >=30) ,
+#     lambda x: x["id"])
+# )
+# reduce(filter(lambda x :x.get("user_id") ==101 ,posts) ,)
 # 1. 특정인의 posts안의 모든 Comments 거르기
-a = list(map(filter(lambda x: x.get("user_id") == 101 , posts) , lambda x: x.get("id")))
-t =filter(lambda x: x.get("post_id") in a , list(comments))
-print(list(a) ,list(t))
+# a = list(map(filter(lambda x: x.get("user_id") == 101 , posts) , lambda x: x.get("id")))
+# t =filter(lambda x: x.get("post_id") in a , list(comments))
+# print(list(a) ,list(t))
 # 2. 특정안의 posts안의 comments를 단 친구의 이름들 뽑기
-pipes = [lambda x: x.get("user_id") , lambda x : x.get("post_id")]
+# before refactoring
+empty_ = []
+for k in posts:
+    if  k.get("user_id") == 101:
+        list(map()
+        for v in comments:
+            
+            empty_.append(v) if v.get("post_id") == k.get("id") else ...
+# print(empty_ )
+# pipes = [filter(lambda x: x.get("user_id") == 101 , posts) , filter(lambda x,y : x.get("post_id") == y.get("id") , comments , posts)]
+
+list(map(lambda x: x.get("user_id")))
+list(map(lambda x: x , filter(lambda x: x, [])))
+
+#pipes = [lambda x: x.get("user_id") , lambda x : x.get("post_id")]
 # c = [filter(reduce(compose ,  pipes) , iter(posts))]
 # print(c)
 #final = list(map(lambda x: filter(lambda y: y not in filters_exclude, x), initial_list)

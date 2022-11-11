@@ -12,3 +12,4 @@ print(_map(
     lambda x: x["id"])
 )
 
+iter()
