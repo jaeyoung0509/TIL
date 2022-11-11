@@ -55,3 +55,72 @@ https://minzoovv.dev/python/history-of-asyncio/
   
 ### stream
 - 네트워크 연결로 작업하기 위해,  async await에서 사용할 수 있는 고수준 프리미티브
+
+
+
+
+----
+### python asyncio concept 
+https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1
+
+#### doing things one at a time, but out of order 
+- traditionally computers have been machines that do one thing at a time
+- modern computers can often do multiple things at once (because of cpu cores)
+
+#### asyncio is not one of these
+- it's not about using multiple cores , it's about using a single core more efficient way
+
+#### subroutines vs corutines
+- TODO
+
+#### stacks and frames 
+- TODO
+
+#### event loops , tasks, corutines
+
+
+---
+### multiple entry point
+- await -> 일시정지가 될 수 있다
+### frame 객체
+- 함수가 실행될 떄 필요한 정보들을 가지고 있음
+- used on executing a function
+- contains information for executing a function
+  - call stack
+  - value stack
+  - local variables
+
+- corutines
+  - based on generator
+  - contains a frame object like thread state
+    - the frame memories which index of bytecode is executed
+    - the frame stores local variables
+#### f.locals
+- 로컬 변수
+#### f.back
+- 자신을 호출한 프레임(previous stack frame , this frame's caller)
+- 자신을 실행한 프레임을 가르킴
+- thread state  (콜 스택)
+#### f.lasti
+- dis를 통해 byte 코드를 볼 수 있음
+- 함수가 가장 최근에 실행한 바이트 코드 
+- 가장 최근의 실행한 바이트코드의 인덱스 (index of last attempted instruction in bytecode)
+#### f_code
+- f_code == __fcode__
+- 바이트코드의 이해
+ 
+ #### yield from 
+- 제너레이터에서 또다른 제너레이터를 사용하기 위함(sub generator)
+- corutines -> yield from을 
+- generator와 비슷함
+- await -> yield from 서브제너레이터를 실행하는것과 유사
+  - 안쪽에서 yield
+
+### event loop
+- 비선점 (for non preemptive multitasking)
+- 비선점 <-> 선점(스레드)
+  - 선점은 언제 스위칭이 될지 알 수 없음
+  - 비선점은 언제 스위칭되는지 명시적으로 
+cf) 스케쥴링이란?
+- 다중 프로그래밍을 가능하게 하는 동작 기법.
+- 운영체제는 프로세스들에게 cpu등 지원 배정을 적절히 함으로서 시스템 성능 개선 가능
