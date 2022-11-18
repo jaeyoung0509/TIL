@@ -17,3 +17,5 @@ class GitFetcher:
 
     def pull(self):
         return self.current_tag
+
+        

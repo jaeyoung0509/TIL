@@ -18,3 +18,4 @@ class ProductBundle:
     def price(self):
         total = sum(p.price for p in self._products)
         return total * (1 - self._perc_discount)
+    
