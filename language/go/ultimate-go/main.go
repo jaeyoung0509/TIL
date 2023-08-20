@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+
 func increment1(inc int) {
 	inc++
 }

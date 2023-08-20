@@ -8,5 +8,6 @@
 - static pod in etc/kubernetes/manifests
   - 스케쥴러에 의해 x, kublet에 의해 
 
-
+### pod resource 할당하기
+- kubernetes's interest in resource => ram,cpu 
 
