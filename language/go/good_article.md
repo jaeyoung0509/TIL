@@ -1,0 +1,2 @@
+- [golang by examples](https://gobyexample.com/stateful-goroutines)
+- [concurrency patterns](https://medium.com/code-chasm/go-concurrency-pattern-worker-pool-a437117025b1)
